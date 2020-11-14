@@ -17,4 +17,16 @@ describe BankAccount do
     it 'always instantiates with a balance of 0' do 
         expect(account.balance).to eq 0
     end 
+
+    it 'creates a deposit method' do 
+        expect(account).to respond_to :deposit
+    end 
+
+    it 'allows user to add funds' do 
+        expect(account.deposit(100)).to eq "Thanks for your deposit of £100"
+    end 
+
+    it 'creates a withdraw method' do 
+        expect(account).to respond_to :withdraw
+    end 
 end 
