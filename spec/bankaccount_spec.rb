@@ -9,4 +9,8 @@ describe BankAccount do
     it 'creates a new instance of a bank account' do 
         expect(account).to be_instance_of BankAccount 
     end 
+
+    it 'create a method called balance' do 
+        expect(account).to respond_to :balance
+    end
 end 
