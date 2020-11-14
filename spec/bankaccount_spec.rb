@@ -31,6 +31,12 @@ describe BankAccount do
     end 
 
     it 'allows user to withdraw funds' do 
+        account.deposit(100)
         expect(account.withdraw(50)).to eq "Thanks for your withdrawal of £50"
     end 
+
+    it 'raises error if withdraw is greater than balance' do
+        account.deposit(100)
+        expect { account.withdraw(1001) }.to raise_error "Sorry, Insufficient Funds"
+      end
 end 

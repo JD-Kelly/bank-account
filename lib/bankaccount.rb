@@ -7,10 +7,13 @@ class BankAccount
     end 
 
     def deposit(amount)
+        @balance += amount
         "Thanks for your deposit of £#{amount}"
     end 
 
     def withdraw(amount)
+        raise 'Sorry, Insufficient Funds' if @balance < amount
+         @balance -= amount
         "Thanks for your withdrawal of £#{amount}"
     end
 end 
