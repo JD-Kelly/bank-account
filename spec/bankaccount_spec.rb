@@ -13,4 +13,8 @@ describe BankAccount do
     it 'create a method called balance' do 
         expect(account).to respond_to :balance
     end
+
+    it 'always instantiates with a balance of 0' do 
+        expect(account.balance).to eq 0
+    end 
 end 
