@@ -10,6 +10,7 @@ class BankAccount
         "Thanks for your deposit of £#{amount}"
     end 
 
-    def withdraw
+    def withdraw(amount)
+        "Thanks for your withdrawal of £#{amount}"
     end
 end 

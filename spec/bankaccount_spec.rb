@@ -29,4 +29,8 @@ describe BankAccount do
     it 'creates a withdraw method' do 
         expect(account).to respond_to :withdraw
     end 
+
+    it 'allows user to withdraw funds' do 
+        expect(account.withdraw(50)).to eq "Thanks for your withdrawal of £50"
+    end 
 end 
